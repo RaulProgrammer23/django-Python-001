@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+
+{% block title %} Hola Mundo en Django {% endblock %}
+
+{% block content %}
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        margin: 0;
+        padding: 0;
+    }
+    .title {
+        font-size: 2.5rem;
+        text-align: center;
+        color: #444;
+        margin-top: 20px;
+    }
+    h3 {
+        text-align: center;
+        color: #666;
+        font-weight: normal;
+    }
+    p {
+        padding: 10px;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin: 20px;
+    }
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-container {
+        max-width: 800px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+    }
+    .image-links {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+    .image-links img {
+        width: 150px;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+    }
+    .image-links img:hover {
+        transform: scale(1.1);
+    }
+    .image-links a {
+        text-decoration: none;
+    }
+</style>
+
+    {{ block.super }}
+        <h3>Raul ;)(; Dev</h3>
+
+    <section>
+
+        
+        <div class="image-links">
+            <a href="https://en.wikipedia.org/wiki/Enigma_machine" target="_blank">
+                <pre>Enigma</pre>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Enigma_%28crittografia%29_-_Museo_scienza_e_tecnologia_Milano.jpg/250px-Enigma_%28crittografia%29_-_Museo_scienza_e_tecnologia_Milano.jpg" alt="Máquina Enigma">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Alan_Turing" target="_blank">
+                <pre>Alan Turín</pre>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Alan_Turing_Aged_16.jpg" alt="Alan Turing">
+            </a>
+            <a href="https://en.wikipedia.org/wiki/Linus_Torvalds" target="_blank">
+                <pre>Linux Torvald</pre>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Lc3_2018_%28263682303%29_%28cropped%29.jpeg/250px-Lc3_2018_%28263682303%29_%28cropped%29.jpeg" alt="Linus Torvalds">
+            </a>
+        </div>
+
+
+        <div class="content-container">
+ 
+            <p>
+                La <b>criptografía</b> es el arte de ocultar mensajes y contar confidencias con ecuaciones secretas. Aunque su estudio sistemático es relativamente joven, ha acompañado al ser humano desde civilizaciones milenarias
+                redhat.com
+                . Ya en el antiguo Egipto, alrededor de 1900 a.C., un escriba talló jeroglíficos alterados en la tumba del noble Khnumhotep II para disfrazar el texto original
+                redhat.com
+                . Con el tiempo surgieron múltiples métodos clásicos: en la Roma antigua Julio César protegía sus órdenes desplazando tres letras (el famoso cifrado César)
+                redhat.com
+                , y en el Renacimiento Blaise de Vigenère ideó un sistema polialfabético basado en claves secretas
+                redhat.com
+                . Estas técnicas tempranas sembraron el principio de que sólo el secreto de la clave, no del método, debía proteger el mensaje. Cada descubrimiento enseñaba que mantener la confianza requería ingenio y disciplina. A medida que la historia avanzó, también lo hicieron las máquinas. A comienzos del siglo XX, el ingeniero americano Edward Hebern diseñó una máquina de rotor electromecánica para cifrar mensajes, un precursor de las torres de clave modernas
+                redhat.com
+                . Poco después de la Primera Guerra Mundial, en 1918 el ingeniero alemán Arthur Scherbius patentó la famosa máquina Enigma, que dos décadas después sería adoptada por la armada alemana (en 1926) y extendida al resto de sus fuerzas militares
+                es.wikipedia.org
+                redhat.com
+                . Con 3 ó 4 rotores giratorios –cada uno cableado de modo complejo–, Enigma transformaba letra tras letra mediante sustituciones cambiantes, ofreciendo más de 150 mil millones de combinaciones posibles al día
+                es.wikipedia.org
+                es.wikipedia.org
+                . Los alemanes, confiados en su aparente inviolabilidad, consideraban a Enigma inquebrantable, un guardián impenetrable de sus comunicaciones secretas.
+                La máquina Enigma en la Segunda Guerra Mundial
+                La máquina Enigma era, en esencia, un mecanismo electromecánico con múltiples ruedas codificadoras. Al presionar una tecla, una señal eléctrica recorría tres rotores internos y un reflector, saliendo finalmente por una lámpara que indicaba la letra cifrada
+                es.wikipedia.org
+                es.wikipedia.org
+                . Tras cada pulsación, el primer rotor avanzaba un paso (y, eventualmente, el segundo y tercer rotor), cambiando así la ruta eléctrica para la siguiente letra
+                es.wikipedia.org
+                . De ese modo, incluso dos letras iguales en el mensaje original se cifraban como letras distintas en el texto codificado, un avance que multiplicaba enormemente la complejidad del cifrado. Los aliados tardaron en descubrir sus debilidades, pero la historia de Enigma es también un relato de decodificación épica. Antes del conflicto, los criptógrafos polacos ya habían desentrañado el funcionamiento de Enigma y compartieron sus hallazgos con los ingleses
+                redhat.com
+                . Ya durante la Segunda Guerra Mundial, en el mítico Bletchley Park inglés un equipo de matemáticos y técnicos –con Alan Turing como figura clave– diseñó la máquina “bomba”, un dispositivo electromecánico que buscaba sistemáticamente la configuración diaria de Enigma
+                blog.oup.com
+                . Gracias a su ingenio, el código nazista comenzó a caer con regularidad. Se estima que el trabajo de Turing y sus compañeros acortó la guerra entre dos y cuatro años
+                es.wikipedia.org
+                , salvando incontables vidas. Así, la aparente invulnerabilidad de Enigma quedó al descubierto: el secreto no era el sistema en sí, sino la clave diaria que, una vez rota, permitía leer cientos de miles de mensajes alemanes.
+                Alan Turing y la criptografía moderna
+                Alan Turing (1912–1954) fue el matemático británico que llevó la criptografía a la era moderna. En Bletchley Park no solo descifró códigos; también aplicó la teoría de la computación a problemas reales. Turing aportó los conceptos de máquina de Turing y algoritmos fundamentales, sentando las bases de la informática actual. Su “bomba” aportó prueba de concepto: la idea de usar máquinas para resolver complejos acertijos cifrados
+                blog.oup.com
+                . Tras la guerra, Turing continuó construyendo los primeros ordenadores electrónicos programables, llevando la criptografía del papel a los circuitos
+                blog.oup.com
+                . En sus manos, el descifrar mensajes secretos de la guerra desembocó en la invención de la máquina universal que convirtió la criptografía en un pilar de la era digital. Su legado inspira hoy cada protocolo seguro en Internet; de hecho, la criptografía moderna es, en gran parte, hija de la “convergencia de teoría y práctica” que Turing impulsó
+                blog.oup.com
+                .
+                Criptografía en Linux: el legado de Linus Torvalds
+                En nuestros días la criptografía florece sobre un código abierto que también tiene sus pioneros. El kernel de Linux, núcleo del sistema operativo homónimo, fue creado en 1991 por Linus Torvalds
+                es.wikipedia.org
+                . Sobre ese proyecto colaborativo, las funciones criptográficas se integraron de inmediato: en 2002 el kernel de Linux introdujo oficialmente una API criptográfica para uso interno y de aplicaciones
+                blog.cloudflare.com
+                . Gracias a esto, cualquier programa puede solicitar al núcleo operaciones de cifrado eficientes. En la práctica, el mundo Linux está tejido con algoritmos seguros: cada conexión y cada archivo cifrado en un servidor o en un teléfono Android basado en Linux han pasado por estas librerías. En la actualidad la criptografía en Linux se manifiesta en múltiples herramientas y protocolos cotidianos:
+                GPG (GNU Privacy Guard): es la implementación libre del estándar OpenPGP. Permite cifrar y firmar datos de forma sencilla
+                gnupg.org
+                . Los usuarios de Linux emplean GPG para proteger correos electrónicos, mensajes y archivos personales, compartiendo su clave pública con quien quieran que los envíe secretos cifrados.
+                LUKS (Linux Unified Key Setup): estándar oficial de cifrado de disco en Linux
+                docs.fedoraproject.org
+                . Con LUKS se configura el cifrado completo de particiones o unidades, de modo que todo el contenido del disco queda inaccesible sin la clave adecuada. Así los portátiles, pendrives o discos externos cifrados con LUKS mantienen a salvo sus datos incluso si el dispositivo cae en manos ajenas.
+                SSH (Secure Shell): protocolo criptográfico líder para sesiones remotas seguras
+                doubleoctopus.com
+                . Linux incluye servidores y clientes SSH que utilizan criptografía de clave pública para autenticar usuarios y cifrar el canal de comunicación. Gracias a SSH, administradores y usuarios pueden conectarse a otros sistemas sin exponer contraseñas en la red ni arriesgar que sus instrucciones sean interceptadas.
+                HTTPS y OpenSSL: el tráfico web seguro (HTTPS) se basa en TLS/SSL, protocolos que en Linux suelen implementarse con bibliotecas como OpenSSL
+                labex.io
+                . OpenSSL es un conjunto de herramientas criptográficas de código abierto muy usado en Linux, que facilita el cifrado de datos y la generación de certificados
+                labex.io
+                . Cada vez que navegamos con el candado verde o usamos servicios en la nube, esos sistemas están usando OpenSSL y TLS para proteger nuestras transacciones y comunicaciones.
+                La belleza de este ecosistema es que todo está respaldado por comunidades colaborativas y estándares públicos. Hoy la criptografía moderna provee algo más que secretos: permite detectar alteraciones no autorizadas y verificar el origen de la información
+                blog.oup.com
+                . Cada mensaje cifrado, cada paquete seguro en Internet, es un testimonio de confianza. Desde los primeros jeroglíficos hasta el kernel de Torvalds, la criptografía narra la historia de cómo la humanidad ha luchado por proteger su privacidad y libertad. Visionarios como Alan Turing y Linus Torvalds, con sus visiones de innovación colaborativa, hicieron posible que en pleno siglo XXI nuestros datos más íntimos viajen seguros por cables y satélites. Más que nunca, la criptografía es un hilo invisible que une la inventiva humana con la tecnología, asegurando que la confidencialidad y la confianza sigan siendo posibles en un mundo conectado
+
+            </p>
+
+        </div>
+
+    </section>
+
+{% endblock %}

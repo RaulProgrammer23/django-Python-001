@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% load filters %}
+
+{% block title %}Crear Lenguaje Backend DJ, ¡HECHO!!!!{% endblock %}
+
+{% block content %}
+<div class="submenu-container">
+    <h2>Crear Lenguaje Backend</h2>
+    
+    <!-- Condición creativa: mensaje personalizado según si el usuario está autenticado -->
+    {% if user.is_authenticated %}
+        <p>¡Hola {{ user.username }}! Estás a punto de crear un lenguaje Backend innovador. ¡Dale con todo y deja tu huella en el mundo del código!</p>
+    {% else %}
+        <p>¡Bienvenido, visitante! Inicia sesión para acceder a funciones avanzadas y comenzar a crear lenguajes Backend épicos.</p>
+    {% endif %}
+    
+    <!-- Contenido principal de la sección -->
+    <p>Esta es la sección para crear lenguajes Backend.</p>
+    
+    <!-- Elemento creativo adicional: un enlace motivador -->
+    <a href="https://www.djangoproject.com/" target="_blank" style="color: #007BFF; font-weight: bold;">
+        Inspírate en Django y crea algo increíble
+    </a>
+</div>
+{% endblock %}

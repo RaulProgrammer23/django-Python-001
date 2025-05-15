@@ -1,0 +1,207 @@
+{% extends 'layout.html' %}
+{% load filters %}
+{% load static %}
+
+{% block title %}Página de Pruebas Optimizada{% endblock %}
+
+{% block content %}
+
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        background-color: #f4f4f4;
+        color: #333;
+    }
+
+    .container {
+        max-width: 960px;
+        margin: auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .title {
+        color: #2c3e50; /* Azul oscuro */
+        text-align: center;
+        margin-bottom: 10px;
+        border-bottom: 2px solid #3498db; /* Azul más claro */
+        padding-bottom: 10px;
+    }
+
+    .author-credit {
+        text-align: center;
+        font-style: italic;
+        color: #7f8c8d; /* Gris */
+        margin-bottom: 30px;
+    }
+
+    h2 {
+        color: #16a085; /* Verde azulado */
+        margin-top: 30px;
+        margin-bottom: 15px;
+    }
+
+    p, .filter-output p {
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #ecf0f1; /* Gris muy claro */
+        border-left: 4px solid #3498db; /* Azul */
+        border-radius: 4px;
+    }
+
+    .philosophical-text {
+        background-color: #e8f6f3; /* Verde menta muy claro */
+        border-left-color: #1abc9c; /* Verde esmeralda */
+        padding: 15px;
+        border-radius: 5px;
+        font-size: 1.1em;
+        text-align: justify;
+    }
+
+    .image-gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px; /* Espacio entre imágenes */
+        justify-content: center; /* Centra las imágenes si no llenan toda la fila */
+        margin-top: 20px;
+        padding: 15px;
+        background-color: #e8eaf6; /* Lavanda claro */
+        border-radius: 8px;
+    }
+
+    .image-gallery div {
+        flex: 1 1 120px; /* Permite que las imágenes crezcan y se encojan, base de 120px */
+        max-width: 150px; /* Un poco más grandes para mejor visualización */
+        text-align: center; /* Centra la imagen si el div es más ancho */
+    }
+
+    .image-gallery img {
+        width: 100%; /* Hace la imagen responsive dentro de su contenedor */
+        height: auto; /* Mantiene la proporción */
+        border-radius: 6px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-gallery img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+
+    .filter-demo-section {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #fdf2e9; /* Naranja muy pálido */
+        border: 1px solid #fad7a0; /* Naranja pálido */
+        border-radius: 8px;
+    }
+    
+    .filter-demo-section h2 {
+        color: #d35400; /* Naranja oscuro */
+        border-bottom: 1px dashed #d35400;
+        padding-bottom: 5px;
+    }
+
+    .custom-saludo {
+        display: block; /* Para que ocupe su propia línea */
+        margin-top: 30px;
+        padding: 15px;
+        background-color: #d6eaf8; /* Azul muy claro */
+        color: #2980b9; /* Azul */
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: center;
+        border-radius: 5px;
+        border: 2px dashed #3498db;
+    }
+
+</style>
+
+<div class="container">
+
+    <h1 class="title">Página de mi Web</h1>
+    <p class="author-credit">{{ "Creado por RaúlDev"|cut:"ñ" }}</p> 
+
+    <section class="intro-text">
+        <h2>Reflexiones Filosóficas y Tecnológicas</h2>
+        <p class="philosophical-text">
+            Este lugar me suena al congreso de los diputados, aquí debaten entre sí
+            los lenguajes y frameworks que mueven los sistemas :D, después de la sesión
+            de DJ , en la página principal.
+        </p>
+
+        <div><img src="{% static 'images/disputados.png' %}" alt="PeleaXD" width='95%'></div>
+
+
+        <p class="philosophical-text">
+            Con una gran potencia el cheetah acelera su propulsión de felino
+            y hace ver elementos de la naturaleza (duales) notorios que usaremos
+            para esclarecer que la vía de la verdad parten de una dualidad
+            y un centro. Véase por ejemplo en la Cruz Cristiana.
+            A veces hay que coger al toro por los cuernos.... JAJAJJA.
+            Filosofías e idiomas chulos.
+        </p>
+    </section>
+
+    <section class="image-gallery-section">
+        <h2>Galería Visual</h2>
+        <div class="image-gallery">
+            <div><img src="{% static 'images/Crismón.png' %}" alt="Crismón"></div>
+            <div><img src="{% static 'images/cheetah.gif' %}" alt="Cheetah GIF"></div>
+            <div><img src="{% static 'images/esfingeSerloJAJ.jpg' %}" alt="Esfinge"></div>
+            <div><img src="{% static 'images/beeCafeina.gif' %}" alt="Abeja Cafeína GIF"></div>
+            <div><img src="{% static 'images/goat-astinencia.gif' %}" alt="Cabra Abstinencia GIF"></div>
+            <div><img src="{% static 'images/diversionAsegurada.png' %}" alt="Diversión Asegurada"></div>
+            <div><img src="{% static 'images/Latido-corazón.gif' %}" alt="Latido Corazón GIF"></div>
+            <div><img src="{% static 'images/Frog-Metamorphosis.gif' %}" alt="Metamorfosis Rana GIF"></div>
+            <div><img src="{% static 'images/misilBalistico1.png' %}" alt="Misil Balístico"></div>
+        </div>
+    </section>
+
+    <section class="filter-demo-section">
+        <h2>Demostración de Filtros de Django</h2>
+
+        <div class="filter-output">
+            <h3>Filtro `default`:</h3>
+            <p>Contenido de 'texto': {{ texto|default:"El texto no fue proporcionado, ¡así que este es el valor por defecto!" }}</p>
+        </div>
+
+        <div class="filter-output">
+            <h3>Filtro `join`:</h3>
+            <p>Lista unida: {{ lista|join:', ' }}</p>
+        </div>
+
+        <div class="filter-output">
+            <h3>Filtro `random` (Un dado 🎲):</h3>
+            <p>Elemento aleatorio de la lista: {{ lista|random }}</p>
+        </div>
+
+        <div class="filter-output">
+            <h3>Filtro `length`:</h3>
+            <p>Longitud de "texto pruebas": {{"texto pruebas"|length}}</p>
+        </div>
+
+        <div class="filter-output">
+            <h3>Filtro `lower`:</h3>
+            <p>Minúsculas de "texto Pruebas": {{"texto Pruebas"|lower}}</p>
+            <p>Otro ejemplo (repetido): {{"texto Pruebas"|lower}}</p>
+        </div>
+
+        <div class="filter-output">
+            <h3>Filtros `striptags` y `wordcount`:</h3>
+            <p>Conteo de palabras en HTML sin etiquetas: {{"<h1>texTo</h1> <strong>Pruebas</strong> hola <p> mundo </p>"|striptags|wordcount}}</p>
+        </div>
+    </section>
+
+    <div class="custom-saludo">
+        {{ "RaúlDev"|saludo|safe }}
+    </div>
+
+</div>
+
+{% endblock %}

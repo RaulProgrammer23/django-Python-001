@@ -1,0 +1,36 @@
+{% extends 'layout.html' %}
+{% load filters %}
+
+{% block title %} Formularios en Django {% endblock %}
+
+{% block content %}
+
+<h1 class="title">Formularios en Django</h1> 
+
+{% if form.errors %}
+    <strong class="rojo">
+        Hay errores en el Formulario
+    </strong>
+{% endif %}
+
+<form action="" method="POST"> 
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+    {% load static %}
+    <div class="conClase">
+        <img src="{% static 'images/discojiji.png' %}" width="130px;" />
+        <img src="{% static 'images/luci.png' %}" width="920px;" />
+    </div>
+
+    <input type="submit" value="Guardar" />
+
+</form>
+ 
+{% endblock %}
+
+
+
+
+

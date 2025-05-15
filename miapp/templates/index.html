@@ -1,0 +1,52 @@
+
+{% extends 'layout.html' %}
+{% load static %}
+
+{% block title %} {{title}} {% endblock %}
+
+
+{% block content %}
+
+    {% comment 'Nota para el comentario' %}
+        <h1>hola hola huoooola</h1>
+    {% endcomment %}
+
+
+<h1 class="title">{{title}}</h1>
+
+<p>{{mi_variable}}</p>
+
+
+{% comment 'Nota para el comentario' %}
+
+{% if nombre and nombre == 'Raúl' %}
+    <p>{{nombre}}</p>
+{% else %}
+    <strong>El nombre no existe o no coincide</strong>
+{% endif %}
+{% endcomment %}
+
+<p>Aquí aprenderás no solo a conocer las batallas de lenguajes de programación más épicas sino que también tendrás un generador de este !!! para que creas tu un lenguaje de programación jiji</p>
+
+<div>
+    <img src="{% static 'images/acic2VG-Imgur.gif' %}" width="100px" alt="Mi imagen">
+    <img src="{% static 'images/toroAnimado.gif' %}" width="100px" alt="Mi imagen">
+    <img src="{% static 'images/eeuu.gif' %}" width="400px" alt="Mi imagen">
+    <img src="{% static 'images/bee.gif' %}" width="400px" alt="Mi imagen">
+
+</div>
+
+<h3>Listado de lenguajes de programación:</h3>
+<ul>
+    {% for lenguaje in lenguajes %}
+        <li>{{forloop.counter}}. {{lenguaje}}</li>
+    {% empty %}
+        <p>NO HAY LENGUAJES QUE MOSTRAR</p>
+    {% endfor %}
+</ul>
+
+
+{% include 'fecha-actual.html' with saludo="Hola Mundo desde plantilla"%}
+
+
+{% endblock %}

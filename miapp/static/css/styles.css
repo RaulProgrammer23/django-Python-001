@@ -1,0 +1,444 @@
+/* ESTILOS GENERALES */
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif, Arial, Helvetica;
+    text-decoration: none;
+}
+
+
+.box p, .box h2, .box h3, .box ul{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.box ul, .box ol {
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.clearfix{
+    clear: both;
+    float: none;
+}
+
+body{
+    background-color: #F2F2F2;
+}
+
+/* [[ CABECERA ]]*/
+header{
+    width: 1212px;
+    height: 140px;
+    background-color: #23282B;
+    margin: 0 auto;
+}
+
+#logotipo{
+    width: 35%;
+    height: 130px;
+    margin: 0 auto;
+    padding-top: 10px;
+    position: relative;
+    z-index: 5 !important;
+}
+
+#logotipo img{
+    display: block;
+    width: 60px;
+    float: left;
+    margin-top: 20px;
+    z-index: 3;
+}
+
+#logotipo h1{
+    display: block;
+    float: left;
+    margin-top: 35px;
+    margin-left: 20px;
+    letter-spacing: 2px;
+    font-weight: lighter;
+    /* Efecto "neón" */
+        text-shadow:
+          0 0 5px #00f,
+          0 0 10px #00f,
+          0 0 20px #00f,
+          0 0 40px #00f;
+          background: linear-gradient(45deg, #00f, #f0f, #0ff);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+    color: #1100ff;
+    z-index: 5;
+}
+@keyframes neon {
+    0%, 100% { text-shadow: 0 0 5px #0ff; }
+    50% { text-shadow: 0 0 20px #0ff; }
+  }
+  
+  #logotipo h1 {
+    animation: neon 1.5s infinite alternate;
+  }
+  
+
+/* Estilos barra navegación */
+nav{
+    width: 1250px;
+    height: 40px;
+    margin: 0 auto;
+    background-color: #1B1E1F;
+    border: 1px solid #333333;
+    box-shadow: 0px 22px 22px gray;
+    font-size: 15px;
+    z-index: 10 !important;
+}
+
+nav ul{
+    list-style: none;
+    text-decoration: none;
+}
+
+nav ul li{
+    line-height: 40px;
+    float: left;
+}
+
+nav ul li a{
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #d1d4d6;
+}
+
+nav ul li a:hover{
+    background: #2ba977;
+    box-shadow: 0px 0px 5px #444 inset;
+    color: white;
+    transition: all 300ms;
+}
+
+.barra{
+    width: 1250px;
+    margin: 0 auto;
+}
+
+.esquina-izquierda{
+    display: block;
+    border-left: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: left;
+}
+
+.esquina-derecha{
+    display: block;
+    border-right: 20px solid transparent;
+    border-top: 10px solid #2B2F30;
+    float: right;
+}
+
+.relleno-barra{
+    display: block;
+    width: 1210px;
+    height: 10px;
+    background: #2B2F30;
+    float: left;
+}
+
+/* {{{{{ CONTENT CENTRAL }}}}}*/
+
+#content{
+    width: 1212px;
+    min-height: 930px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 40px;
+}
+
+.box{
+    background: white;
+    width: 95%;
+    min-height: 930px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin: 0 auto;
+}
+
+.box form{
+    width: 40%;
+}
+
+.box form input,
+.box form label{
+    display: block;
+    padding: 5px;
+    padding-left: 0px;
+}
+
+.box form input[type="text"],
+.box form textarea,
+.box form select{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.box form select{
+    width: 100px;
+    padding: 5px;
+}
+
+.box form input[type="submit"],
+.box form input[type="button"],
+.box form button{
+    padding: 10px;
+    margin-top: 5px;
+    background: #2ba977;
+    border: 1px solid #444;
+    color: white;
+    transition: 300ms all;
+}
+
+.rojo{
+    color: red;
+}
+
+.message{
+    padding: 20px;
+    background: #1f7e58;
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.box form input[type="submit"]:hover,
+.box form input[type="button"]:hover,
+.box form button:hover{
+    cursor: pointer;
+    background: #1f7e58;
+}
+
+
+.title{
+    color: #444;
+    letter-spacing: 1px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.article-item{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+    clear: both;
+}
+
+.article-item .image{
+    width: 200px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+}
+
+.article-item .image img{
+    height: 200px;
+}
+
+.article-item .data{
+    float: left;
+    padding: 15px;
+    padding-top: 0px;
+}
+
+.article-item h2{
+    display: block;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.article-item span.date{
+    display: block;
+    font-size: 15px;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.btn{
+    padding: 10px;
+    background: rgb(207, 48, 48);
+    color: white;
+    border: 1px solid black;
+    display: block;
+    margin-top: 20px;
+    width: 100px;
+    text-align: center;
+}
+
+
+footer{
+    width: 1250px;
+    background-color: #1B1E1F;
+    border: 1px solid #333;
+    color: #d1d4d6; 
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 20px gray;
+}
+
+/* [[[[[[[[[[[[[[[[[[[ EL LADO DEL BIEN ]]]]]]]]]]]]]]]]]]]]]]]]]*/
+.-- {
+    height: 6px;
+    width: 500px;
+    background-color: #444; /* Base gris oscura para un look profesional */
+    position: absolute;
+    right: 1440px;
+    top: 156px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra suave inicial */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: -1;
+}
+
+.--:hover {
+    background-color: #222; /* Fondo un poco más oscuro al hacer hover */
+    transform: scale(1.02); /* Sutil aumento de tamaño para dar dinamismo */
+    box-shadow: 
+        0 0 20px 5px rgba(0, 170, 255, 0.8), /* Sombra externa con efecto neón azul */
+        inset 0 0 10px rgba(0, 170, 255, 0.5); /* Resplandor interno para un toque extra de 3D */
+        position: absolute;
+        z-index: -1;
+    }
+
+/* [[[[[[[[[[[[[[[[[[[ EL LADO DEL MAL ]]]]]]]]]]]]]]]]]]]]]]]]] */
+
+.--- {
+    height: 6px;
+    width: 500px;
+    background-color: #444; /* Base gris oscura para un look profesional */
+    position: relative;
+    left: 1100px;
+    top: 10px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra suave inicial */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    z-index: -1 !important; 
+}
+
+.---:hover {
+    background-color: #222; /* Fondo un poco más oscuro al hacer hover */
+    transform: scale(1.02); /* Sutil aumento de tamaño para dar dinamismo */
+    box-shadow: 
+        0 0 20px 5px rgba(255, 0, 0, 0.8), /* Sombra externa con efecto neón azul */
+        inset 0 0 10px rgba(255, 0, 0, 0.5); /* Resplandor interno para un toque extra de 3D */
+}
+
+
+.conClase :nth-child(1){
+    position: absolute;
+    left: 100px;
+    top: 100px;
+}
+
+.conClase :nth-child(2){
+    position: absolute;
+    left: 500px;
+    top: 100px;
+}
+
+
+
+/** [[[[[ TABLERO DJ ]]]]]]**/
+
+
+.dj-Front{
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+
+}
+
+.dj-Back{
+    position: absolute;
+    top: -10px;
+    left: 1360px;
+    z-index: 2;
+
+}
+
+.mesa-mezclas{
+    position: absolute;
+    
+}
+
+.mesa-mezclas img{
+    height: 160px;
+    position: absolute;
+    top: -160px;
+    left: 50px;
+}
+
+
+/* A FUMAHHH*/
+
+/* Estilo para el contenedor padre del submenú */
+nav ul li.submenu {
+    position: relative; /* Hace que el submenú se posicione relativo a este contenedor */
+}
+
+/* Estilo para el submenú (dropdown) */
+nav ul li.submenu ul.dropdown {
+    display: none;       /* Se oculta por defecto */
+    position: absolute;  /* Posicionamiento absoluto */
+    top: 100%;           /* Justo debajo del elemento padre */
+    left: 0;
+    z-index: 1000;       /* Asegura que esté por encima de otros elementos */
+    background-color: #000000;  /* Fondo blanco (puedes ajustarlo) */
+    box-shadow: 0 2px 8px rgba(183, 0, 0, 0.15); /* Sombra sutil para mayor visibilidad */
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+/* Mostrar el submenú al pasar el mouse */
+nav ul li.submenu:hover ul.dropdown {
+    display: block;
+}
+
+/* Opcional: Estilos para los elementos del submenú */
+nav ul li.submenu ul.dropdown li a {
+    display: block;
+    padding: 8px 12px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav ul li.submenu ul.dropdown li a:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* Estilos para el contenedor del grafo */
+#network {
+    width: 100%;
+    height: 80vh; /* Ajusta la altura según tus necesidades */
+    border: 1px solid #ccc; /* Color del borde */
+    background-color: #f9f9f9; /* Color de fondo */
+}
+
+/* Estilos para los nodos */
+.vis-node {
+    font-family: 'TuFuentePersonalizada', sans-serif; /* Reemplaza con tu fuente */
+    font-size: 14px;
+    color: #333; /* Color del texto */
+}
+
+/* Estilos para las aristas */
+.vis-edge {
+    stroke: #666; /* Color de las líneas */
+}
+

@@ -1,0 +1,121 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        {% block title %}
+        <!-- Titulo de cada página -->
+        {% endblock %}
+        | RaúDev
+    </title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}" />
+    <script type="text/javascript" src="https://unpkg.com/vis-network@9.1.2/dist/vis-network.min.js"></script>
+    <link href="https://unpkg.com/vis-network@9.1.2/dist/vis-network.min.css" rel="stylesheet" type="text/css" />
+
+</head>
+<body>
+
+    <!-- Cabecera de la página -->
+    <header>
+        <div id="logotipo">
+            <!--Logo django-->
+            <img src="{% static 'images/logo.png' %}" />
+
+            <h1>ϾΛVRΛ | CWⱯ | XP</h1>
+            𝐶𝛥𝑉𝛥
+    
+        </div>
+
+        <div class="mesa-mezclas">
+            <img src="{% static 'images/fondo-cabezera.png' %}" width="1100px;" />
+        </div>
+
+        <div class="dj-Front">
+            <img src="{% static 'images/dj-Front.png' %}" width="200px;" />
+        </div>
+
+        <div class="dj-Back">
+            <img src="{% static 'images/dj-Back.png' %}" width="200px;" />
+        </div>
+
+
+        <!--
+        <div class="conClase">
+            <img src="{% static 'images/discojiji.png' %}" width="140px;" />
+            <img src="{% static 'images/luci.png' %}" width="1420px;" />
+        </div>
+        -->
+        
+
+
+    </header>
+
+    <nav> 
+        <ul>
+            <li>
+                <a href="{% url 'inicio' %}">Inicio</a>
+            </li>
+            <li>
+                <a href="{% url 'articulos' %}">Articulos</a>
+            </li>
+            <li>
+                <a href="{% url 'create' %}">Añadir Lenguaje</a>
+            </li>
+            <!-- Submenú para "Crear Lenguaje" -->
+            <li class="submenu">
+                <a href="{% url 'create_full' %}">Crear Lenguaje</a>
+                <ul class="dropdown">
+                    <li>
+                        <a href="{% url 'create_frontend' %}">Frontend</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'create_backend' %}">Backend</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{% url 'hola_mundo' %}">Criptografía</a>
+            </li>
+            <li>
+                <a href="{% url 'pagina' %}">Pelea de Lenguajes</a>
+            </li>
+            <li>
+                <a href="{% url 'graph' %}">Grafo atómico</a>
+            </li>
+            <li>
+                <a href="{% url 'contacto' 'Raúl' 'CM' %}">Contacto</a>
+            </li>
+            <div class="--">--</div>
+            <div class="---">--</div>
+        </ul>
+    </nav>
+    
+    <div class="barra">
+        <span class="esquina-izquierda"></span>
+        <span class="relleno-barra"></span>
+        <span class="esquina-derecha"></span>
+    </div>
+
+
+
+    <div id="content">
+
+        <div class="box">
+            {% block content %}
+                <!-- Codigo que viene de templates -->
+                <strong>Contenido del bloque original</strong>
+            {% endblock %}
+        </div>
+   
+    </div>
+
+    <footer>
+        Raúl Dev Python &copy; RC-AVA-M - {% now "d/m/Y h:m:s "%}
+    </footer>
+
+</body>
+
+</html>
